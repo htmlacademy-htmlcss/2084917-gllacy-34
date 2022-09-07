@@ -99,6 +99,12 @@ img {
   color: #2D3440;
 }
 
+.navigation-user-menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .navigation-user-menu-link {
   display: block;
   font-family: inherit;
@@ -163,7 +169,51 @@ img {
   font-size: 16px;
   line-height: 22px;
   text-transform: none;
+  color: #565C66;
+}
+
+.promo-description {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: none;
   color: #2D3440;
+}
+
+.subtitle {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: none;
+  color: #2D3440;
+}
+
+.price {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: none;
+  color: #2D3440;
+}
+
+.slider-pagination {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .promo-subtitle {
@@ -176,6 +226,18 @@ img {
   line-height: 30px;
   text-transform: none;
   color: #2D3440;
+}
+
+.popular-product-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none
+}
+
+.company-advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none
 }
 
 .news-post-title {
@@ -200,4 +262,215 @@ img {
   text-transform: none;
   text-decoration: none;
   color: #2D3440;
+}
+
+.label {
+  display: block;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
+  color: #2D3440;
+}
+
+.field {
+  display: block;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
+}
+
+.field::placeholder {
+  color: #B9B9B9;
+}
+
+.address-subtitle {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: none;
+  color: #2D3440;
+}
+
+.contacts-phone-link {
+  display: block;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: none;
+  color: #2D3440;
+}
+
+.contacts-phone-details-subtitle {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: none;
+  color: #565C66;
+}
+
+.footer-social-contacts-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer-menu-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer-menu-link {
+  display: block;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D3440;
+}
+
+.footer-menu-link-current {
+  display: block;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D3440;
+}
+
+.copyright {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.htmlacademy-link {
+  display: block;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.breadcrumbs-link {
+  display: block;
+  font-family: inherit;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: none;
+  text-decoration: none;
+  color: #2D3440;
+}
+
+.breadcrumbs-link-current {
+  display: block;
+  text-decoration: underline;
+}
+
+.breadcrumbs-title {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  text-transform: none;
+  color: #2D3440;
+}
+
+.filter-title {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: none;
+  color: #2D3440;
+}
+
+.select-control {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: none;
+  color: #2D3440;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.control-label {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D3440;
+}
+
+.catalog-products-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination-number-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination-link {
+  display: block;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: none;
 }
