@@ -365,10 +365,17 @@ img {
   list-style-type: none
 }
 
-.company-advantages {
+.company-advantages-container {
   display: flex;
   flex-direction: column;
+  padding: 24px;
   background-image: url("../images/index.html/background-advantages.png");
+}
+
+.company-advantages {
+  width:1122px;
+  height: 432px;
+  background-color: #FCFCFC;
 }
 
 .company-advantages-title {
