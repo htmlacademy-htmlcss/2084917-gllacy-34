@@ -368,6 +368,7 @@ img {
 .company-advantages {
   display: flex;
   flex-direction: column;
+  background-image: url("../images/index.html/background-advantages.png");
 }
 
 .company-advantages-title {
@@ -401,6 +402,27 @@ img {
   background-image: url("../images/index.html/background-newsletter.png")
 }
 
+.newsletter-form {
+  display: flex;
+}
+
+.delivery {
+  display: flex;
+  justify-content: space-between;
+  background-image: url("../images/index.html/delivery-picture.jpg");
+}
+
+.delivary-content {
+  display: flex;
+  flex-direction: column;
+  width: 371px;
+}
+
+.delivery-information-container {
+  width: 500px;
+  background-color: #FCFCFC;
+}
+
 .news-post-title {
   margin: 0;
   padding: 0;
@@ -415,6 +437,7 @@ img {
 
 .news-post-link {
   display: block;
+  width: 303px;
   font-family: inherit;
   font-style: normal;
   font-weight: 700;
@@ -448,6 +471,15 @@ img {
 
 .field::placeholder {
   color: #B9B9B9;
+}
+
+.contacts {
+  background-image: url("../images/index.html/feedback-picture.jpg");
+}
+
+.address-container {
+  width: 343px;
+  background-color: #FCFCFC;
 }
 
 .address-subtitle {
