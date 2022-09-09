@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -84,122 +85,132 @@
         <h2 class="visually-hidden">
           Ассортимент интернет-магазина Глейси
         </h2>
-        <p class="slider-title">
-          Нежный пломбир с клубничным джемом
-        </p>
-        <p class="slider-description">
-          Натуральное мороженое из свежих сливок
-          и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.
-        </p>
 
-        <p class="slider-title visually-hidden">
-          Сливочное мороженое со вкусом банана
-        </p>
-        <p class="slider-description visually-hidden">
-          Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний
-          день.
-        </p>
+        <div class="slider-container">
+          <div class="slider-content">
+            <p class="slider-title">
+              Нежный пломбир с клубничным джемом
+            </p>
+            <p class="slider-description">
+              Натуральное мороженое из свежих сливок
+              и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.
+            </p>
 
-        <p class="slider-title visually-hidden">
-          Карамельный пломбир с маршмеллоу
-        </p>
-        <p class="slider-description visually-hidden">
-          Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.
-        </p>
+            <p class="slider-title visually-hidden">
+              Сливочное мороженое со вкусом банана
+            </p>
+            <p class="slider-description visually-hidden">
+              Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний
+              день.
+            </p>
 
-        <button class="button order-button" type="submit">
-          Заказать
-        </button>
+            <p class="slider-title visually-hidden">
+              Карамельный пломбир с маршмеллоу
+            </p>
+            <p class="slider-description visually-hidden">
+              Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех
+              возрастов.
+            </p>
 
-        <div class="slider-image-container">
-          <div class="slider-image-content-selected">
-            <button class="slider-button slider-prev" type="button">
-              <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="37" y="37" width="36" height="36" rx="18" transform="rotate(180 37 37)" fill="#FCFCFC"
-                  fill-opacity=".3" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M19.8647 24.1352c.2597.2597.6808.2597.9405 0 .2597-.2597.2597-.6807 0-.9404l-4.2013-4.2013 4.2013-4.2013c.2597-.2597.2597-.6808 0-.9405-.2597-.2597-.6807-.2597-.9404 0l-4.6687 4.6688c-.001.0009-.0019.0018-.0029.0028-.2597.2597-.2597.6807 0 .9404l4.6715 4.6715Z"
-                  fill="#FCFCFC" />
-                <rect x="37" y="37" width="36" height="36" rx="18" transform="rotate(180 37 37)" stroke="#FCFCFC"
-                  stroke-width="2" />
-              </svg>
-              <span class="visually-hidden">Предыдущее фото.</span>
-            </button>
-            <img class="slider-image" src="images/index.html/icon-ice-creme.png" width="306" height="507"
-              alt="Нежный пломбир с клубничным джемом в рожке.">
-            <button class="slider-button slider-next" type="button">
-              <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x=".99994" y="1" width="36" height="36" rx="18" fill="#FCFCFC" fill-opacity=".3" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M18.1352 13.8648c-.2597-.2597-.6807-.2597-.9404 0-.2597.2597-.2597.6807 0 .9404l4.2012 4.2013-4.2013 4.2013c-.2597.2597-.2597.6808 0 .9405.2597.2597.6808.2597.9405 0l4.6687-4.6688c.0009-.0009.0019-.0018.0028-.0028.2597-.2597.2597-.6807 0-.9404l-4.6715-4.6715Z"
-                  fill="#FCFCFC" />
-                <rect x=".99994" y="1" width="36" height="36" rx="18" stroke="#FCFCFC" stroke-width="2" />
-              </svg>
-              <span class="visually-hidden">Следующее фото.</span>
+            <button class="button order-button" type="submit">
+              Заказать
             </button>
           </div>
-          <div class="slider-image-content-not-selected">
-            <button class="slider-button slider-prev" type="button">
-              <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="37" y="37" width="36" height="36" rx="18" transform="rotate(180 37 37)" fill="#FCFCFC"
-                  fill-opacity=".3" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M19.8647 24.1352c.2597.2597.6808.2597.9405 0 .2597-.2597.2597-.6807 0-.9404l-4.2013-4.2013 4.2013-4.2013c.2597-.2597.2597-.6808 0-.9405-.2597-.2597-.6807-.2597-.9404 0l-4.6687 4.6688c-.001.0009-.0019.0018-.0029.0028-.2597.2597-.2597.6807 0 .9404l4.6715 4.6715Z"
-                  fill="#FCFCFC" />
-                <rect x="37" y="37" width="36" height="36" rx="18" transform="rotate(180 37 37)" stroke="#FCFCFC"
-                  stroke-width="2" />
-              </svg>
-              <span class="visually-hidden">Предыдущее фото.</span>
-            </button>
-            <img class="slider-image" src="images/index.html/icon-ice-cream-banana.png" width="306" height="507"
-              alt="Нежный пломбир с клубничным джемом в рожке.">
-            <button class="slider-button slider-next" type="button">
-              <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x=".99994" y="1" width="36" height="36" rx="18" fill="#FCFCFC" fill-opacity=".3" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M18.1352 13.8648c-.2597-.2597-.6807-.2597-.9404 0-.2597.2597-.2597.6807 0 .9404l4.2012 4.2013-4.2013 4.2013c-.2597.2597-.2597.6808 0 .9405.2597.2597.6808.2597.9405 0l4.6687-4.6688c.0009-.0009.0019-.0018.0028-.0028.2597-.2597.2597-.6807 0-.9404l-4.6715-4.6715Z"
-                  fill="#FCFCFC" />
-                <rect x=".99994" y="1" width="36" height="36" rx="18" stroke="#FCFCFC" stroke-width="2" />
-              </svg>
-              <span class="visually-hidden">Следующее фото.</span>
-            </button>
-          </div>
-          <div class="slider-image-content-not-selected">
-            <button class="slider-button slider-prev" type="button">
-              <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="37" y="37" width="36" height="36" rx="18" transform="rotate(180 37 37)" fill="#FCFCFC"
-                  fill-opacity=".3" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M19.8647 24.1352c.2597.2597.6808.2597.9405 0 .2597-.2597.2597-.6807 0-.9404l-4.2013-4.2013 4.2013-4.2013c.2597-.2597.2597-.6808 0-.9405-.2597-.2597-.6807-.2597-.9404 0l-4.6687 4.6688c-.001.0009-.0019.0018-.0029.0028-.2597.2597-.2597.6807 0 .9404l4.6715 4.6715Z"
-                  fill="#FCFCFC" />
-                <rect x="37" y="37" width="36" height="36" rx="18" transform="rotate(180 37 37)" stroke="#FCFCFC"
-                  stroke-width="2" />
-              </svg>
-              <span class="visually-hidden">Предыдущее фото.</span>
-            </button>
-            <img class="slider-image" src="images/index.html/icon-ice-cream-caramel.png" width="306" height="507"
-              alt="Нежный пломбир с клубничным джемом в рожке.">
-            <button class="slider-button slider-next" type="button">
-              <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x=".99994" y="1" width="36" height="36" rx="18" fill="#FCFCFC" fill-opacity=".3" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M18.1352 13.8648c-.2597-.2597-.6807-.2597-.9404 0-.2597.2597-.2597.6807 0 .9404l4.2012 4.2013-4.2013 4.2013c-.2597.2597-.2597.6808 0 .9405.2597.2597.6808.2597.9405 0l4.6687-4.6688c.0009-.0009.0019-.0018.0028-.0028.2597-.2597.2597-.6807 0-.9404l-4.6715-4.6715Z"
-                  fill="#FCFCFC" />
-                <rect x=".99994" y="1" width="36" height="36" rx="18" stroke="#FCFCFC" stroke-width="2" />
-              </svg>
-              <span class="visually-hidden">Следующее фото.</span>
-            </button>
-          </div>
-          <div class="slider-image-content">
-            <img class="slider-image" src="images/index.html/slideshow-one.png" width="100" height="150"
-              alt="Сливочное мороженое со вкусом банана в рожке.">
-          </div>
-          <div class="slider-image-content">
-            <img class="slider-image" src="images/index.html/slideshow-two.png" width="100" height="150"
-              alt="Карамельный пломбир с маршмеллоу в рожке.">
+
+          <div class="slider-image-container">
+            <div class="slider-image-content-selected">
+              <button class="slider-button slider-prev" type="button">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="37" y="37" width="36" height="36" rx="18" transform="rotate(180 37 37)" fill="#FCFCFC"
+                    fill-opacity=".3" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M19.8647 24.1352c.2597.2597.6808.2597.9405 0 .2597-.2597.2597-.6807 0-.9404l-4.2013-4.2013 4.2013-4.2013c.2597-.2597.2597-.6808 0-.9405-.2597-.2597-.6807-.2597-.9404 0l-4.6687 4.6688c-.001.0009-.0019.0018-.0029.0028-.2597.2597-.2597.6807 0 .9404l4.6715 4.6715Z"
+                    fill="#FCFCFC" />
+                  <rect x="37" y="37" width="36" height="36" rx="18" transform="rotate(180 37 37)" stroke="#FCFCFC"
+                    stroke-width="2" />
+                </svg>
+                <span class="visually-hidden">Предыдущее фото.</span>
+              </button>
+              <img class="slider-image" src="images/index.html/icon-ice-cream.png" width="306" height="507"
+                alt="Нежный пломбир с клубничным джемом в рожке.">
+              <button class="slider-button slider-next" type="button">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x=".99994" y="1" width="36" height="36" rx="18" fill="#FCFCFC" fill-opacity=".3" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M18.1352 13.8648c-.2597-.2597-.6807-.2597-.9404 0-.2597.2597-.2597.6807 0 .9404l4.2012 4.2013-4.2013 4.2013c-.2597.2597-.2597.6808 0 .9405.2597.2597.6808.2597.9405 0l4.6687-4.6688c.0009-.0009.0019-.0018.0028-.0028.2597-.2597.2597-.6807 0-.9404l-4.6715-4.6715Z"
+                    fill="#FCFCFC" />
+                  <rect x=".99994" y="1" width="36" height="36" rx="18" stroke="#FCFCFC" stroke-width="2" />
+                </svg>
+                <span class="visually-hidden">Следующее фото.</span>
+              </button>
+            </div>
+            <div class="slider-image-content-not-selected">
+              <button class="slider-button slider-prev" type="button">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="37" y="37" width="36" height="36" rx="18" transform="rotate(180 37 37)" fill="#FCFCFC"
+                    fill-opacity=".3" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M19.8647 24.1352c.2597.2597.6808.2597.9405 0 .2597-.2597.2597-.6807 0-.9404l-4.2013-4.2013 4.2013-4.2013c.2597-.2597.2597-.6808 0-.9405-.2597-.2597-.6807-.2597-.9404 0l-4.6687 4.6688c-.001.0009-.0019.0018-.0029.0028-.2597.2597-.2597.6807 0 .9404l4.6715 4.6715Z"
+                    fill="#FCFCFC" />
+                  <rect x="37" y="37" width="36" height="36" rx="18" transform="rotate(180 37 37)" stroke="#FCFCFC"
+                    stroke-width="2" />
+                </svg>
+                <span class="visually-hidden">Предыдущее фото.</span>
+              </button>
+              <img class="slider-image" src="images/index.html/icon-ice-cream-banana.png" width="306" height="507"
+                alt="Нежный пломбир с клубничным джемом в рожке.">
+              <button class="slider-button slider-next" type="button">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x=".99994" y="1" width="36" height="36" rx="18" fill="#FCFCFC" fill-opacity=".3" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M18.1352 13.8648c-.2597-.2597-.6807-.2597-.9404 0-.2597.2597-.2597.6807 0 .9404l4.2012 4.2013-4.2013 4.2013c-.2597.2597-.2597.6808 0 .9405.2597.2597.6808.2597.9405 0l4.6687-4.6688c.0009-.0009.0019-.0018.0028-.0028.2597-.2597.2597-.6807 0-.9404l-4.6715-4.6715Z"
+                    fill="#FCFCFC" />
+                  <rect x=".99994" y="1" width="36" height="36" rx="18" stroke="#FCFCFC" stroke-width="2" />
+                </svg>
+                <span class="visually-hidden">Следующее фото.</span>
+              </button>
+            </div>
+            <div class="slider-image-content-not-selected">
+              <button class="slider-button slider-prev" type="button">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="37" y="37" width="36" height="36" rx="18" transform="rotate(180 37 37)" fill="#FCFCFC"
+                    fill-opacity=".3" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M19.8647 24.1352c.2597.2597.6808.2597.9405 0 .2597-.2597.2597-.6807 0-.9404l-4.2013-4.2013 4.2013-4.2013c.2597-.2597.2597-.6808 0-.9405-.2597-.2597-.6807-.2597-.9404 0l-4.6687 4.6688c-.001.0009-.0019.0018-.0029.0028-.2597.2597-.2597.6807 0 .9404l4.6715 4.6715Z"
+                    fill="#FCFCFC" />
+                  <rect x="37" y="37" width="36" height="36" rx="18" transform="rotate(180 37 37)" stroke="#FCFCFC"
+                    stroke-width="2" />
+                </svg>
+                <span class="visually-hidden">Предыдущее фото.</span>
+              </button>
+              <img class="slider-image" src="images/index.html/icon-ice-cream-caramel.png" width="306" height="507"
+                alt="Нежный пломбир с клубничным джемом в рожке.">
+              <button class="slider-button slider-next" type="button">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x=".99994" y="1" width="36" height="36" rx="18" fill="#FCFCFC" fill-opacity=".3" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M18.1352 13.8648c-.2597-.2597-.6807-.2597-.9404 0-.2597.2597-.2597.6807 0 .9404l4.2012 4.2013-4.2013 4.2013c-.2597.2597-.2597.6808 0 .9405.2597.2597.6808.2597.9405 0l4.6687-4.6688c.0009-.0009.0019-.0018.0028-.0028.2597-.2597.2597-.6807 0-.9404l-4.6715-4.6715Z"
+                    fill="#FCFCFC" />
+                  <rect x=".99994" y="1" width="36" height="36" rx="18" stroke="#FCFCFC" stroke-width="2" />
+                </svg>
+                <span class="visually-hidden">Следующее фото.</span>
+              </button>
+            </div>
+
+            <div class="slider-image-container">
+              <div class="slider-image-content">
+                <img class="slider-image" src="images/index.html/slideshow-one.png" width="100" height="150"
+                  alt="Сливочное мороженое со вкусом банана в рожке.">
+              </div>
+              <div class="slider-image-content">
+                <img class="slider-image" src="images/index.html/slideshow-two.png" width="100" height="150"
+                  alt="Карамельный пломбир с маршмеллоу в рожке.">
+              </div>
+            </div>
           </div>
         </div>
 
+        <div class="slider-social-container">
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
             <button class="slider-pagination-button pagination-button-current" type="button">
@@ -256,12 +267,14 @@
             </a>
           </li>
         </ul>
+      </div>
       </section>
 
       <section class="promo">
         <h2 class="promo-title main-title">
           Заказывайте мороженое и получайте подарки!
         </h2>
+        <div class="promo-container">
         <div class="promo-one">
           <p class="promo-subtitle">
             Малинка даром!
@@ -284,6 +297,7 @@
             Хочу подарок
           </a>
         </div>
+      </div>
       </section>
 
       <section class="popular-product">

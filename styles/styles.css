@@ -31,7 +31,6 @@ body {
   flex-direction: column;
   min-height: 100%;
   min-width: 1170px;
-  margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -58,8 +57,21 @@ img {
   overflow: hidden;
 }
 
+.page-header {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
 .main-container {
   flex-grow: 1;
+}
+
+.main-index {
+  display: flex;
+  flex-direction: column;
+  width: 1170px;
+  margin: 0 auto;
 }
 
 .button {
@@ -100,14 +112,38 @@ img {
   border-radius: 20px;
 }
 
+.catalog-button {
+  width: 179px;
+}
+
+.slider-button {
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+}
+
+.navigation-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
 .navigation-menu-list {
-  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
+  list-style-type: none;
+}
+
+.navigation-logo-link {
+  display: block;
 }
 
 .navigation-menu-link {
   display: block;
+  padding: 8px 16px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -119,13 +155,17 @@ img {
 }
 
 .navigation-user-menu-list {
-  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .navigation-user-menu-link {
   display: block;
+  margin-right: 16px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -143,6 +183,42 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+}
+
+.slider-content {
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+}
+
+.slider-image-content-selected {
+  display: flex;
+}
+
+.slider-image-content-not-selected {
+  display: none;
+}
+
+.slider-image-container {
+  display: flex;
+  align-items: center;
+}
+
+.slider-image-content {
+  display: flex;
+  width: 100px;
+  height: 150px;
+  margin-right: 41px;
 }
 
 .slider-title {
@@ -167,6 +243,11 @@ img {
   line-height: 24px;
   text-transform: none;
   color: #2D3440;
+}
+
+.slider-social-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-title {
@@ -223,16 +304,40 @@ img {
   color: #2D3440;
 }
 
+.popular-product-price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .slider-pagination {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .social-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo-one,
+.promo-two {
+  width: 570px;
 }
 
 .promo-subtitle {
@@ -252,15 +357,48 @@ img {
 }
 
 .popular-product-list {
+  display: grid;
+  grid-template-columns: 270px 270px 270px 270px;
+  gap: 40px 30px;
   margin: 0;
   padding: 0;
   list-style-type: none
 }
 
+.company-advantages {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-advantages-title {
+  text-align: center;
+}
+
 .company-advantages-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 40px 32px;
   margin: 0;
   padding: 0;
   list-style-type: none
+}
+
+.news {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-post,
+.newsletter {
+  width: 570px;
+}
+
+.news-post {
+  background-image: url("../images/index.html/news-picture.jpg");
+}
+
+.newsletter {
+  background-image: url("../images/index.html/background-newsletter.png")
 }
 
 .news-post-title {
@@ -349,13 +487,27 @@ img {
   width: 250PX;
 }
 
+.page-footer {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.footer-social-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-social-contacts-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .footer-menu-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px 24px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -369,6 +521,7 @@ img {
   font-size: 14px;
   line-height: 20px;
   color: #2D3440;
+  text-decoration: none;
 }
 
 .footer-menu-link-current {
@@ -382,6 +535,7 @@ img {
 }
 
 .copyright {
+  display: flex;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -398,7 +552,13 @@ img {
   line-height: 16px;
 }
 
+.main-inner {
+  width: 1170px;
+  margin: 0 auto;
+}
+
 .breadcrumbs {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -406,6 +566,7 @@ img {
 
 .breadcrumbs-link {
   display: block;
+  margin-right: 28px;
   font-family: inherit;
   font-style: normal;
   font-size: 14px;
@@ -432,6 +593,28 @@ img {
   color: #2D3440;
 }
 
+.catalog-filters {
+  width: 823px;
+}
+
+.filters-container {
+  display: flex;
+}
+
+.select-control-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.range-checkbox-container {
+  display: flex;
+}
+
+.checkbox-group-container {
+  display: flex;
+}
+
 .filter-title {
   margin: 0;
   padding: 0;
@@ -445,6 +628,7 @@ img {
 }
 
 .select-control {
+  width: 196px;
   margin: 0;
   padding: 0;
   font-family: inherit;
@@ -456,10 +640,28 @@ img {
   color: #2D3440;
 }
 
+.range-scale-group {
+  width: 196px;
+}
+
+.radio-group {
+  width: 383px;
+}
+
+.checkbox-group {
+  width: 604px;
+  margin-right: 16px;
+}
+
 .catalog-filter-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.catalog-filter-item {
+  margin-right: 16px;
 }
 
 .control-label {
@@ -474,18 +676,42 @@ img {
 }
 
 .catalog-products-list {
+  display: grid;
+  grid-template-columns: 270px 270px 270px 270px;
+  gap: 40px 30px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+.catalog-products-price-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination-container {
+  display: flex;
+}
+
+/* .one {
+  display: flex;
+
+} */
+
+.pagination-group {
+  display: flex;
+  margin-left: auto;
+}
+
 .pagination-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .pagination-number-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
