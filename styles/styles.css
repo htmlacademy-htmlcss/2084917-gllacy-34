@@ -124,6 +124,15 @@ img {
   cursor: pointer;
 }
 
+.cart-button {
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  background-color: #FF2F64;
+  border-radius: 50%;
+  border: none;
+}
+
 .navigation-menu {
   display: flex;
   justify-content: space-between;
@@ -460,6 +469,10 @@ img {
 
 .promo-button {
   width: 176px;
+}
+
+.popular-product {
+ margin-bottom: 80px;
 }
 
 .popular-product-list {
