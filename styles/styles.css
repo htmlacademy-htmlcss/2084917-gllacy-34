@@ -472,7 +472,17 @@ img {
 }
 
 .popular-product {
- margin-bottom: 80px;
+  margin-bottom: 80px;
+}
+
+.popular-product-item {
+  display: block;
+  box-sizing: border-box;
+  min-width: 270px;
+  min-height: 281px;
+  padding: 0 40px 24px;
+  background: linear-gradient(#FEAFC3 51px, #FCFCFC 49px);
+  border-radius: 8px;
 }
 
 .popular-product-list {
@@ -482,6 +492,24 @@ img {
   margin: 0;
   padding: 0;
   list-style-type: none
+}
+
+.popular-product-link {
+  display: block;
+}
+
+.popular-product-image {
+  display: block;
+}
+
+.popular-product-subtitle {
+  display: block;
+  text-align: center;
+}
+
+.popular-product-description {
+  display: block;
+  text-align: center;
 }
 
 .company-advantages-container {
