@@ -121,6 +121,7 @@ img {
   box-sizing: border-box;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .navigation-menu {
@@ -217,6 +218,7 @@ img {
 .slider {
   display: flex;
   flex-direction: column;
+  margin-bottom: 80px;
 }
 
 .slider-container {
@@ -232,6 +234,8 @@ img {
 
 .slider-image-content-selected {
   display: flex;
+  flex-wrap: wrap;
+  margin-right: 41px;
 }
 
 .slider-image-content-not-selected {
@@ -241,6 +245,22 @@ img {
 .slider-image-container {
   display: flex;
   align-items: center;
+}
+
+.slider-image-selected {
+  position: relative;
+  display: block;
+  width: 306px;
+  height: 507px;
+}
+
+.slider-image-selected::before {
+  position: absolute;
+  content: "";
+  width: 312px;
+  height: 312px;
+  background-color: #FFCBD8;
+  border-radius: 50%;
 }
 
 .slider-image {
@@ -278,10 +298,30 @@ img {
   color: #2D3440;
 }
 
+.slider-pagination-button {
+  display: block;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  background-color: #FCFCFC;
+  opacity: 0.3;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-button-current {
+  background-color: #FCFCFC;
+  opacity: 1;
+}
+
 .slider-social-container {
   display: flex;
   justify-content: space-between;
 }
+
+
 
 .main-title {
   margin: 0;
@@ -346,6 +386,7 @@ img {
 
 .slider-pagination {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -353,9 +394,19 @@ img {
 
 .social-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.social-link {
+  display: block;
+  margin-right: 16px;
+}
+
+.social-item:last-child {
+  margin-right: 0;
 }
 
 .promo {
