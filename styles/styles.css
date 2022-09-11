@@ -133,12 +133,14 @@ img {
   justify-content: center;
   align-items: center;
   margin: 0;
+  margin-right: auto;
   padding: 0;
   list-style-type: none;
 }
 
 .navigation-logo-link {
   display: block;
+  margin-right: 16px;
 }
 
 .navigation-menu-link {
@@ -176,6 +178,10 @@ img {
   color: #2D3440;
 }
 
+.navigation-user-menu-item:last-child {
+  margin-right: 0;
+}
+
 .navigation-phone-link {
   display: block;
   font-family: inherit;
@@ -183,6 +189,29 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+}
+
+.search-link,
+.login-link,
+.cart-link {
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 30px;
+}
+
+.login-link,
+.cart-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+}
+
+.search-link {
+  width: 32px;
+  height: 32px;
+  padding: 7px;
+  box-sizing: border-box;
 }
 
 .slider {
@@ -214,15 +243,18 @@ img {
   align-items: center;
 }
 
-.slider-image-content {
-  display: flex;
-  width: 100px;
-  height: 150px;
+.slider-image {
+  display: block;
   margin-right: 41px;
+}
+
+.slider-image:last-child {
+  margin-right: 0;
 }
 
 .slider-title {
   margin: 0;
+  margin-bottom: 24px;
   padding: 0;
   font-family: inherit;
   font-style: normal;
@@ -235,6 +267,7 @@ img {
 
 .slider-description {
   margin: 0;
+  margin-bottom: 48px;
   padding: 0;
   font-family: inherit;
   font-style: normal;
@@ -253,6 +286,7 @@ img {
 .main-title {
   margin: 0;
   padding: 0;
+  text-align: center;
   font-family: inherit;
   font-style: normal;
   font-weight: 900;
@@ -332,7 +366,8 @@ img {
 
 .promo-container {
   display: flex;
-  justify-content: space-between;
+  width: 1170px;
+  gap: 30px;
 }
 
 .promo-one,
@@ -373,13 +408,9 @@ img {
 }
 
 .company-advantages {
-  width:1122px;
+  width: 1122px;
   height: 432px;
   background-color: #FCFCFC;
-}
-
-.company-advantages-title {
-  text-align: center;
 }
 
 .company-advantages-list {
