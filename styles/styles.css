@@ -345,6 +345,8 @@ img {
 }
 
 .description {
+  margin: 0;
+  padding: 0;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -408,6 +410,7 @@ img {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  cursor: pointer;
 }
 
 .social-link {
@@ -496,10 +499,13 @@ img {
 
 .popular-product-link {
   display: block;
+  cursor: pointer;
 }
 
 .popular-product-image {
   display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .popular-product-subtitle {
@@ -516,13 +522,24 @@ img {
   display: flex;
   flex-direction: column;
   padding: 24px;
+  margin: 0;
+  margin-bottom: 80px;
   background-image: url("../images/index.html/background-advantages.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
 }
 
 .company-advantages {
-  width: 1122px;
-  height: 432px;
-  background-color: #FCFCFC;
+  min-height: 432px;
+  padding: 56px 40px;
+  margin: 0;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+}
+
+.company-advantages-item {
+  width: 505px;
 }
 
 .company-advantages-list {
@@ -534,9 +551,58 @@ img {
   list-style-type: none
 }
 
+.icon-ice-cream::before {
+  content: "";
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/index.html/icon-ice-cream-production.svg");
+  background-repeat: no-repeat;
+}
+
+.icon-cow {
+  content: "";
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/index.html/icon-cow.svg");
+  background-repeat: no-repeat;
+}
+
+
+.icon-leaf {
+  content: "";
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/index.html/icon-leaf.svg");
+  background-repeat: no-repeat;
+}
+
+
+.icon-thermometer {
+  content: "";
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/index.html/icon-thermometer.svg");
+  background-repeat: no-repeat;
+}
+
+
 .news {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 80px;
 }
 
 .news-post,
@@ -545,11 +611,29 @@ img {
 }
 
 .news-post {
+  padding: 33px 0 68px 32px;
   background-image: url("../images/index.html/news-picture.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
 }
 
 .newsletter {
-  background-image: url("../images/index.html/background-newsletter.png")
+  padding: 6px;
+  background-image: url("../images/index.html/background-newsletter.png");
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.newsletter-content {
+  padding: 26px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+}
+
+.newsletter-description {
+  width: 506px;
+  margin-bottom: 42px;
 }
 
 .newsletter-form {
@@ -575,6 +659,7 @@ img {
 
 .news-post-title {
   margin: 0;
+  margin-bottom: 13px;
   padding: 0;
   font-family: inherit;
   font-style: normal;
