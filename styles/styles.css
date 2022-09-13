@@ -167,6 +167,12 @@ img {
   color: #2D3440;
 }
 
+.navigation-menu-link-current {
+  display: block;
+  background: #FF4A78;
+  border-radius: 30px;
+}
+
 .navigation-user-menu-list {
   display: flex;
   justify-content: center;
@@ -529,12 +535,12 @@ img {
   margin-bottom: 80px;
   background-image: url("../images/index.html/background-advantages.png");
   background-repeat: no-repeat;
+  background-color: #FCC850;
   background-size: cover;
   border-radius: 16px;
 }
 
 .company-advantages {
-  min-height: 432px;
   padding: 56px 40px;
   margin: 0;
   background-color: #FFFFFF;
@@ -554,19 +560,23 @@ img {
   list-style-type: none
 }
 
+.icon-ice-cream {
+  position: relative;
+}
+
 .icon-ice-cream::before {
+  position: absolute;
   content: "";
-  display: block;
   margin: 0;
   padding: 0;
   width: 48px;
   height: 48px;
+  left: 0;
   background-image: url("../images/index.html/icon-ice-cream-production.svg");
   background-repeat: no-repeat;
-  background-color: #FCC850;
 }
 
-.icon-cow {
+.icon-cow::before {
   content: "";
   display: block;
   margin: 0;
@@ -577,7 +587,7 @@ img {
   background-repeat: no-repeat;
 }
 
-.icon-leaf {
+.icon-leaf::before {
   content: "";
   display: block;
   margin: 0;
@@ -588,8 +598,7 @@ img {
   background-repeat: no-repeat;
 }
 
-
-.icon-thermometer {
+.icon-thermometer::before {
   content: "";
   display: block;
   margin: 0;
@@ -655,11 +664,12 @@ img {
 .delivery {
   display: flex;
   justify-content: space-between;
+  gap: 135px;
   margin-bottom: 80px;
   padding: 64px 64px 64px 100px;
   background-image: url("../images/index.html/delivery-picture.jpg");
   background-repeat: no-repeat;
-  background-size: content;
+  background-size: cover;
   background-color: #E7E7E7;
   border-radius: 16px;
 }
@@ -716,8 +726,14 @@ img {
   width: 420px;
 }
 
+.delivery-date-label,
+.delivery-phone-label,
+.delivery-address-label {
+  margin-bottom: 8px;
+}
+
 .delivery-button {
-  align-self: center;
+  margin: 0 auto;
 }
 
 .news-post-title {
@@ -759,7 +775,8 @@ img {
 
 .field {
   display: block;
-  padding: 14px 16px;
+  box-sizing: border-box;
+  padding: 14px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -785,6 +802,7 @@ img {
 
 .address-container {
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   width: 343px;
   padding: 40px;
@@ -854,7 +872,9 @@ img {
 
 .footer-social-contacts-list {
   display: flex;
+  width: 120px;
   margin: 0;
+  margin-right: auto;
   padding: 0;
   list-style-type: none;
 }
@@ -867,7 +887,9 @@ img {
   display: grid;
   grid-template-columns: auto auto;
   gap: 8px 24px;
+  width: 356px;
   margin: 0;
+  margin-left: 130px;
   padding: 0;
   list-style-type: none;
 }
@@ -909,6 +931,11 @@ img {
   color: #2D3440;
 }
 
+.copyright-container {
+  width: 193px;
+  margin-left: auto;
+}
+
 .copyright {
   display: flex;
   font-family: inherit;
@@ -919,6 +946,7 @@ img {
 }
 
 .copyright-link {
+  display: block;
   margin-bottom: 14px;
 }
 
