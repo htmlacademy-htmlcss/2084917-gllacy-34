@@ -286,6 +286,7 @@ img {
   display: flex;
   align-items: center;
   gap: 41px;
+  margin-left: auto;
 }
 
 .slider-image {
@@ -499,16 +500,6 @@ img {
   margin-bottom: 80px;
 }
 
-.popular-product-item {
-  display: block;
-  box-sizing: border-box;
-  min-width: 270px;
-  min-height: 281px;
-  padding: 0 40px 24px;
-  background: linear-gradient(#FEAFC3 51px, #FCFCFC 49px);
-  border-radius: 8px;
-}
-
 .popular-product-list {
   display: grid;
   grid-template-columns: 270px 270px 270px 270px;
@@ -518,9 +509,34 @@ img {
   list-style-type: none
 }
 
-.popular-product-link {
+.popular-product-item {
   display: block;
+  box-sizing: border-box;
+  min-width: 270px;
+  min-height: 281px;
+  padding: 0 40px 24px;
+  border-radius: 8px;
+}
+
+.popular-product-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+}
+
+.popular-product-link::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  display: block;
+  width: 270px;
+  height: 281px;
+  top: 50px;
+  border-radius: 8px;
+  background-color: #FCFCFC;
 }
 
 .popular-product-image {
@@ -532,11 +548,13 @@ img {
 .popular-product-subtitle {
   display: block;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .popular-product-description {
   display: block;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .company-advantages-container {
