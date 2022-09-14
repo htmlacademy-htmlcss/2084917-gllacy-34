@@ -125,6 +125,20 @@ img {
   cursor: pointer;
 }
 
+.slider-prev {
+  position: absolute;
+  top: 50%;
+  left: -28px;
+  transform: translateY(-50%);
+}
+
+.slider-next {
+  position: absolute;
+  top: 50%;
+  right: -29px;
+  transform: translateY(-50%);
+}
+
 .cart-button {
   width: 32px;
   height: 32px;
@@ -177,6 +191,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 16px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -184,7 +199,6 @@ img {
 
 .navigation-user-menu-link {
   display: block;
-  margin-right: 16px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -193,10 +207,6 @@ img {
   text-transform: none;
   text-decoration: none;
   color: #2D3440;
-}
-
-.navigation-user-menu-item:last-child {
-  margin-right: 0;
 }
 
 .navigation-phone-link {
@@ -248,45 +258,47 @@ img {
   width: 470px;
 }
 
-.slider-image-content-selected {
+.slider-image-content {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin-right: 41px;
 }
 
-.slider-image-content-not-selected {
+.slider-image-content::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  display: block;
+  width: 312px;
+  height: 312px;
+  top: -55px;
+  left: 50%;
+  transform: translate(-50%,50%);
+  background-color: #FFCBD8;
+  border-radius: 50%;
+}
+
+.slider-not-selected {
   display: none;
 }
 
 .slider-image-container {
   display: flex;
   align-items: center;
+  gap: 41px;
 }
 
-.slider-image-selected {
-  position: relative;
+.slider-image {
   display: block;
   width: 306px;
   height: 507px;
 }
 
-.slider-image-selected::after {
-  position: absolute;
-  content: "";
-  top: ;
-  left: ;
-  width: 312px;
-  height: 312px;
-  background-color: #FFCBD8;
-  border-radius: 50%;
-}
-
-.slider-image {
+.slider-image-not-selected {
   display: block;
-  margin-right: 41px;
 }
 
-.slider-image:last-child {
+.slider-image-not-selected:last-child {
   margin-right: 0;
 }
 
@@ -547,10 +559,6 @@ img {
   border-radius: 16px;
 }
 
-.company-advantages-item {
-  width: 505px;
-}
-
 .company-advantages-list {
   display: grid;
   grid-template-columns: auto auto;
@@ -560,18 +568,24 @@ img {
   list-style-type: none
 }
 
-.icon-ice-cream {
-  position: relative;
+.company-advantages-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 505px;
+}
+
+.company-advantages-description {
+  margin-left: 16px;
 }
 
 .icon-ice-cream::before {
-  position: absolute;
   content: "";
+  display: block;
   margin: 0;
   padding: 0;
   width: 48px;
   height: 48px;
-  left: 0;
   background-image: url("../images/index.html/icon-ice-cream-production.svg");
   background-repeat: no-repeat;
 }
@@ -608,7 +622,6 @@ img {
   background-image: url("../images/index.html/icon-thermometer.svg");
   background-repeat: no-repeat;
 }
-
 
 .news {
   display: flex;
