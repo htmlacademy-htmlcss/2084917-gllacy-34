@@ -88,8 +88,9 @@ img {
   cursor: pointer;
   color: #2D3440;
   background-color: #FCFCFC;
-  border: 4px solid rgba(252, 252, 252, 0.4);
-  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+  border: none;
+  box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4),
+    0 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
 }
 
@@ -100,9 +101,9 @@ img {
 .pink-button {
   width: 152px;
   color: #FCFCFC;
-  background: #FF2F64;
-
-  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+  background-color: #FF2F64;
+  box-shadow: 0 0 0 4px rgba(255, 47, 100, 0.3),
+  0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 .filter-button {
@@ -250,11 +251,13 @@ img {
 .slider-container {
   display: flex;
   align-items: center;
+  margin-left: 70px;
 }
 
 .slider-content {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 470px;
 }
 
@@ -273,7 +276,7 @@ img {
   height: 312px;
   top: -55px;
   left: 50%;
-  transform: translate(-50%,50%);
+  transform: translate(-50%, 50%);
   background-color: #FFCBD8;
   border-radius: 50%;
 }
@@ -286,7 +289,24 @@ img {
   display: flex;
   align-items: center;
   gap: 41px;
-  margin-left: auto;
+  width: 630px;
+}
+
+.small-image-container {
+  position: relative;
+}
+
+.small-image-container::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  display: block;
+  width: 100px;
+  height: 100px;
+  top: 25px;
+  background-color: #FFCBD8;
+  border-radius: 50%;
+  opacity: 0.4;
 }
 
 .slider-image {
@@ -297,6 +317,7 @@ img {
 
 .slider-image-not-selected {
   display: block;
+  opacity: 0.4;
 }
 
 .slider-image-not-selected:last-child {
@@ -1126,6 +1147,21 @@ img {
   list-style-type: none;
 }
 
+.catalog-products-link {
+  position: relative;
+}
+
+.catalog-products-link::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  display: block;
+  width: 270px;
+  height: 281px;
+  border-radius: 8px;
+  background-color: #FCFCFC;
+}
+
 .catalog-products-price-container {
   display: flex;
   justify-content: space-between;
@@ -1135,10 +1171,6 @@ img {
   display: flex;
 }
 
-/* .one {
-  display: flex;
-
-} */
 
 .pagination-group {
   display: flex;
