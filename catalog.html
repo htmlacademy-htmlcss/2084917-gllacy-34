@@ -101,25 +101,24 @@
         </p>
       </header>
 
-      <section class="catalog-filters">
+      <section class="catalog-filters-container">
         <h3 class="visually-hidden">
           Сортировка товара
         </h3>
 
-        <div class="filters-container">
-          <div class="select-control-container">
-            <p class="filter-title select-control-title">
-              Сортировка:
-            </p>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="popular">по популярности</option>
-              <option value="cheap">по возрастанию цены</option>
-              <option value="expensive">по убыванию цены</option>
-            </select>
-          </div>
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
 
-          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-            <div class="range-checkbox-container">
+            <fieldset class="select-control-container">
+              <legend class="filter-title select-control-title">
+                Сортировка:
+              </legend>
+              <select class="select-control" aria-label="Сортировка">
+                <option value="popular">по популярности</option>
+                <option value="cheap">по возрастанию цены</option>
+                <option value="expensive">по убыванию цены</option>
+              </select>
+            </fieldset>
+
               <fieldset class="range-scale-group">
                 <legend class="filter-title catalog-filter-title">Цена: 100 ₽ – 500 ₽</legend>
                 <div class="range-scale">
@@ -176,7 +175,7 @@
                   </li>
                 </ul>
               </fieldset>
-            </div>
+
 
 
             <div class="checkbox-group-container">
@@ -226,8 +225,7 @@
               </button>
             </div>
 
-          </form>
-        </div>
+        </form>
       </section>
 
       <section class="catalog-products">
