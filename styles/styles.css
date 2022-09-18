@@ -115,6 +115,7 @@ img {
   box-sizing: border-box;
   width: 185px;
   height: 36px;
+  margin-top: 25px;
   padding: 8px 53px;
   font-weight: 700;
   font-size: 14px;
@@ -575,7 +576,9 @@ img {
 .popular-product-image {
   display: block;
   margin: 0;
+  margin-bottom: 15px;
   padding: 0;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .popular-product-subtitle {
@@ -616,23 +619,21 @@ img {
   gap: 40px 32px;
   margin: 0;
   padding: 0;
-  list-style-type: none
+  list-style-type: none;
 }
 
 .company-advantages-item {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 505px;
-}
-
-.company-advantages-description {
-  margin-left: 16px;
+  gap: 16px;
 }
 
 .icon-ice-cream::before {
   content: "";
   display: block;
+  flex-shrink: 0;
   margin: 0;
   padding: 0;
   width: 48px;
@@ -644,6 +645,7 @@ img {
 .icon-cow::before {
   content: "";
   display: block;
+  flex-shrink: 0;
   margin: 0;
   padding: 0;
   width: 48px;
@@ -655,6 +657,7 @@ img {
 .icon-leaf::before {
   content: "";
   display: block;
+  flex-shrink: 0;
   margin: 0;
   padding: 0;
   width: 48px;
@@ -666,6 +669,7 @@ img {
 .icon-thermometer::before {
   content: "";
   display: block;
+  flex-shrink: 0;
   margin: 0;
   padding: 0;
   width: 48px;
@@ -735,6 +739,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #E7E7E7;
+  background-position: -10px;
   border-radius: 16px;
 }
 
@@ -924,9 +929,19 @@ img {
 }
 
 .page-footer {
+  position: relative;
   width: 1170px;
   margin: 0 auto;
-  padding: 48px;
+  padding: 48px 0;
+}
+
+.page-footer-catalog::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1170px;
+  top: 0;
+  border-bottom: 1px solid rgba(252, 252, 252, 0.3);
 }
 
 .footer-social-container {
@@ -1098,6 +1113,7 @@ img {
 .catalog-filter {
   display: flex;
   flex-wrap: wrap;
+
 }
 
 .range-checkbox-container {
@@ -1108,11 +1124,15 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  margin-top: 16px;
+  padding: 0;
 }
 
 .filter-title {
   margin: 0;
-  margin-right: 8px;
+  margin-left: 16px;
+  margin-bottom: 8px;
   padding: 0;
   font-family: inherit;
   font-style: normal;
@@ -1126,8 +1146,6 @@ img {
 .select-control-container {
   display: block;
   margin-right: 24px;
-  background-color: rgba(252, 252, 252, 0.3);
-  border-radius: 18px;
   border: none;
 }
 
@@ -1146,20 +1164,24 @@ img {
   line-height: 20px;
   text-transform: none;
   color: #2D3440;
-  background-color: transparent;
-  border: none;
   background-image: url("../images/catalog.html/arrow-select-control.svg");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right 10px center;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 18px;
+  border: none;
   appearance: none;
 }
 
 .range-scale-group {
+border: none;
+}
+
+.range-scale-container {
   display: block;
   box-sizing: border-box;
-  width: 196px;
-  height: 36px;
   margin-right: 24px;
+  padding: 17px 16px;
   background-color: rgba(252, 252, 252, 0.3);
   border-radius: 18px;
   border: none;
@@ -1178,7 +1200,7 @@ img {
   width: 56px;
   height: 0;
   left: 40px;
-  top: -1px;
+  top: 0;
   border-bottom: 2px solid #565C66;
 }
 
@@ -1197,24 +1219,20 @@ img {
 }
 
 .toggle-min {
-  top: -6px;
+  top: -7px;
   left: -10px;
 }
 
 .toggle-max {
-  top: -6px;
+  top: -7px;
   right: -10px;
 }
 
 .radio-group {
   display: block;
   box-sizing: border-box;
-  width: 383px;
-  height: 36px;
   margin: 0;
   padding: 0;
-  background-color: rgba(252, 252, 252, 0.3);
-  border-radius: 18px;
   border: none;
 }
 
@@ -1222,20 +1240,17 @@ img {
   display: block;
   box-sizing: border-box;
   gap: 16px;
-  width: 604px;
-  height: 40px;
-  padding: 9px 24px;
   margin: 0;
   margin-right: 16px;
-  background-color: rgba(252, 252, 252, 0.3);
-  border-radius: 18px;
   border: none;
 }
 
 .catalog-filter-list {
   display: flex;
   margin: 0;
-  padding: 0;
+  padding: 8px 24px;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 18px;
   list-style-type: none;
 }
 
@@ -1244,16 +1259,29 @@ img {
 }
 
 .control {
-  position: relative;
-  display: block;
+  display: flex;
 }
 
 .control-mark {
-  position: absolute;
+  position: relative;
+  display: block;
   width: 16px;
   height: 16px;
-  border: 2px solid #2D3440;
+  border: 1px solid #2D3440;
   border-radius: 3px;
+}
+
+.icon-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.control-mark-checkbox {
+  display: none;
 }
 
 .control-label {
@@ -1270,6 +1298,7 @@ img {
 .control-input[type="radio"] + .control-mark {
   border-radius: 50%;
   border-color: #2D3440;
+  margin-right: 8px;
 }
 
 .control-input[type="radio"]:checked + .control-mark::before {
@@ -1283,13 +1312,8 @@ img {
   border-radius: 50%;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::before,
-.control-input[type="checkbox"]:checked + .control-mark::after {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-image: url("../images/catalog.html/icon-checkbox.svg");
-  content: "";
+.control-input[type="checkbox"] + .control-mark {
+  margin-right: 8px;
 }
 
 .catalog-products-list {
@@ -1331,6 +1355,11 @@ img {
   background-color: #FCFCFC;
 }
 
+.catalog-products-image {
+  margin-bottom: 20px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 .catalog-products-subtitle {
   margin-bottom: 8px;
 }
@@ -1347,25 +1376,13 @@ img {
 }
 
 .pagination-container {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 41px 0 41px 0;
   margin-left: auto;
   margin-bottom: 40px;
-  width: 642px;
-}
-
-.pagination-container::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 1170px;
-  top: 50%;
-  transform: translate(-50%, 50%);
-  left: 55px;
-  border-bottom: 1px solid rgba(252, 252, 252, 0.3);
+  width: 681px;
 }
 
 .pagination-group {
@@ -1436,4 +1453,10 @@ img {
   width: 16px;
   height: 16px;
   margin-left: 8px;
+}
+
+/* для ссылок пагинации в неактивном состоянии */
+
+.disabled {
+  opacity: 0.3;
 }
