@@ -127,6 +127,30 @@ img {
   border-radius: 20px;
 }
 
+.filter-button:default {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 2px solid #FCFCFC;
+}
+
+.filter-button:hover {
+  background-color: #FCFCFC;
+  box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.3);
+}
+
+.filter-button:active {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.filter-button:focus {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 2px solid #2D3440;
+  box-shadow: none;
+}
+
+.filter-button:disabled {
+  opacity: 0.4;
+}
+
 .catalog-button {
   width: 179px;
 }
@@ -1245,10 +1269,9 @@ img {
 
 .range-toggle:focus {
   background-color: #2D3440;
-  border: 6px solid #FCFCFC,
-          6px solid #2D3440;
+  border: 6px solid #FCFCFC;
+  box-shadow: 0 0 0 2px #2D3440;
 }
-
 
 .toggle-min {
   top: -7px;
@@ -1448,7 +1471,7 @@ img {
 
 .control-input[type="radio"]:hover + .control-mark {
   border-radius: 50%;
-  border-color:  #FCFCFC;
+  border-color: #FCFCFC;
   margin-right: 8px;
 }
 
@@ -1459,13 +1482,13 @@ img {
   height: 6px;
   top: 5px;
   left: 5px;
-  background-color:  #FCFCFC;
+  background-color: #FCFCFC;
   border-radius: 50%;
 }
 
 .control-input[type="radio"]:disabled + .control-mark {
   border-radius: 50%;
-  border-color:  #2D3440;
+  border-color: #2D3440;
   margin-right: 8px;
   opacity: 0.5;
 }
@@ -1477,7 +1500,7 @@ img {
   height: 6px;
   top: 5px;
   left: 5px;
-  background-color:  #2D3440;
+  background-color: #2D3440;
   border-radius: 50%;
   opacity: 0.5;
 }
