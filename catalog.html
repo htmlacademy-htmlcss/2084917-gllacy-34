@@ -23,6 +23,23 @@
             <a class="navigation-menu-link navigation-menu-link-current" href="catalog.html">
               Каталог
             </a>
+            <div class="popover popover-catalog">
+              <h3 class="popover-title">Новинки</h3>
+              <ul class="popover-dropdown-list">
+                <li class="popover-dropdown-item">
+                  <a class="popover-link-catalog" href="catalog.html">Сливочное</a>
+                </li>
+                <li class="popover-dropdown-item">
+                  <a class="popover-link-catalog" href="catalog.html">Щербеты</a>
+                </li>
+                <li class="popover-dropdown-item">
+                  <a class="popover-link-catalog" href="catalog.html">Фруктовый лед</a>
+                </li>
+                <li class="popover-dropdown-item">
+                  <a class="popover-link-catalog" href="catalog.html">Мелорин</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="navigation-menu-item">
             <a class="navigation-menu-link" href="#">
@@ -51,6 +68,16 @@
               </svg>
               <span class="visually-hidden">Поиск.</span>
             </a>
+            <div class="popover popover-search">
+              <h3 class="visually-hidden">Поиск по сайту</h3>
+              <form class="popover-form-search" action="https://echo.htmlacademy.ru/" method="post">
+                <label class="visually-hidden popover-form-label" for="search">Поиск</label>
+                <input class="popover-field field" type="text" id="search" name="search" placeholder="Поиск по сайту" required>
+                <button class="button popover-button-search" type="reset">
+                  <span class="visually-hidden">Свернуть поиск</span>
+                </button>
+              </form>
+            </div>
           </li>
           <li class="navigation-user-menu-item">
             <a class="navigation-user-menu-link login-link" href="#">
@@ -63,6 +90,28 @@
                 Вход
               </span>
             </a>
+            <div class="popover popover-login">
+              <h3 class="popover-login-title">Личный кабинет</h3>
+              <form class="popover-form" action="https://echo.htmlacademy.ru/" method="post">
+                <label class="visually-hidden popover-form-label" for="email">Ваш email</label>
+                <input class="popover-field field" type="email" id="email" name="email" placeholder="email@example.com" required>
+                <label class="visually-hidden popover-form-label" for="password">Ваш пароль</label>
+                <input class="popover-field field" type="password" id="password" name="password" placeholder="Введите пароль" value="" required>
+                <div class="popover-auth">
+                  <button class="button popover-button-login" type="submit">
+                    Войти
+                  </button>
+                  <div class="popover-link-group">
+                    <a class="popover-link" href="#">
+                      Забыли пароль?
+                    </a>
+                    <a class="popover-link" href="#">
+                      Регистрация
+                    </a>
+                  </div>
+                </div>
+              </form>
+            </div>
           </li>
           <li class="navigation-user-menu-item">
             <a class="navigation-user-menu-link cart-link" href="#">
@@ -74,6 +123,43 @@
               <span class="visually-hidden">Корзина.</span>
               <span class="products-amount">2 товара</span>
             </a>
+            <div class="popover popover-cart">
+              <h3 class="popover-title">Корзина</h3>
+              <ul class="popover-list">
+                <li class="popover-item">
+                  <img class="image-popover" src="images/index.html/raspberry.png" width="46" height="46" alt="Мороженное с малиной.">
+                  <a class="popover-title" href="catalog.html">
+                    Малинка
+                  </a>
+                  <span class="popover-item-details">1 кг х 310 ₽</span>
+                  <b class="popover-item-price">310 ₽</b>
+                  <button class="button close-button-popover" type="button">
+                    <span class="visually-hidden">Удалить из корзины.</span>
+                  </button>
+                </li>
+                <li class="popover-item">
+                  <img class="image-popover" src="images/index.html/bubblegum.png" width="46" height="46" alt="Мороженное с малиной.">
+                  <a class="popover-title" href="catalog.html">
+                    Малинка
+                  </a>
+                  <span class="popover-item-details">1,5 кг х 320 ₽</span>
+                  <b class="popover-item-price">480 ₽</b>
+                  <button class="button close-button-popover" type="button">
+                    <span class="visually-hidden">Удалить из корзины.</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="">
+                <button class="button popover-button" type="submit">
+                  Оформить заказ
+                </button>
+                <span class="popover-total-price">Итого: 790 ₽</span>
+              </div>
+            </div>
+
+            <div class="popover-cart-empty">
+              <h3 class="popover-cart-empty-title">Ваша корзина пока пуста</h3>
+            </div>
           </li>
         </ul>
       </nav>
@@ -82,7 +168,7 @@
     <main class="main-inner">
       <header class="inner-header">
         <h2 class="visually-hidden">
-          Каталог мороженого
+          Каталог мороженого.
         </h2>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
