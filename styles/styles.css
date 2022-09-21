@@ -849,6 +849,7 @@ img {
   display: block;
   box-sizing: border-box;
   padding: 14px 0 14px 16px;
+  margin: 0;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -1041,10 +1042,6 @@ img {
   line-height: 16px;
 }
 
-.modal-container-close {
-  display: none;
-}
-
 .main-inner {
   width: 1170px;
   margin: 0 auto;
@@ -1171,9 +1168,25 @@ img {
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-color: rgba(252, 252, 252, 0.3);
-  border-radius: 18px;
+  border-radius: 20px;
   border: none;
   appearance: none;
+}
+
+.select-control:default {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.3);
+}
+
+.select-control:hover {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.select-control:focus {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.4);
+  outline: 3px solid #FCFCFC;
 }
 
 .range-scale-group {
@@ -1221,6 +1234,22 @@ img {
   cursor: pointer;
 }
 
+.range-toggle:hover {
+  background-color: #2D3440;
+  border: 6px solid #FCFCFC;
+}
+
+.range-toggle:active {
+  background-color: #2D3440;
+}
+
+.range-toggle:focus {
+  background-color: #2D3440;
+  border: 6px solid #FCFCFC,
+          6px solid #2D3440;
+}
+
+
 .toggle-min {
   top: -7px;
   left: -10px;
@@ -1264,6 +1293,7 @@ img {
 .control {
   position: relative;
   display: flex;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -1276,18 +1306,100 @@ img {
   border-radius: 3px;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::after {
+.control-mark-checkbox {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: none;
+}
+
+.control-input[type="checkbox"] + .control-mark {
+  margin-right: 8px;
+}
+
+.control-input[type="checkbox"] + .control-mark::after {
   position: absolute;
   content: "";
   background-image: url("../images/catalog.html/icon-checkbox-square.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #FF2F64;
   height: 16px;
   width: 16px;
 }
 
-.control-mark-checkbox {}
+.control-input[type="checkbox"]:default + .control-mark::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/catalog.html/icon-checkbox-square.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
+.control-input[type="checkbox"]:hover + .control-mark::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/catalog.html/icon-checkbox-square-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
+.control-input[type="checkbox"]:disabled + .control-mark::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/catalog.html/icon-checkbox-square.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  opacity: 0.5;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/catalog.html/icon-checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
+.control-input[type="checkbox"]:checked:disabled + .control-mark::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/catalog.html/icon-checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
+.control-input[type="checkbox"]:checked:hover + .control-mark::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/catalog.html/icon-checkbox-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
+.control-input[type="checkbox"]:checked:disabled + .control-mark::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/catalog.html/icon-checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  opacity: 0.5;
+}
+
 
 .control-label {
   margin: 0;
@@ -1317,8 +1429,57 @@ img {
   border-radius: 50%;
 }
 
-.control-input[type="checkbox"] + .control-mark {
+.control-input[type="radio"]:default + .control-mark {
+  border-radius: 50%;
+  border-color: #2D3440;
   margin-right: 8px;
+}
+
+.control-input[type="radio"]:checked:default + .control-mark::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  top: 5px;
+  left: 5px;
+  background-color: #2D3440;
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:hover + .control-mark {
+  border-radius: 50%;
+  border-color:  #FCFCFC;
+  margin-right: 8px;
+}
+
+.control-input[type="radio"]:checked:hover + .control-mark::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  top: 5px;
+  left: 5px;
+  background-color:  #FCFCFC;
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:disabled + .control-mark {
+  border-radius: 50%;
+  border-color:  #2D3440;
+  margin-right: 8px;
+  opacity: 0.5;
+}
+
+.control-input[type="radio"]:checked:disabled + .control-mark::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  top: 5px;
+  left: 5px;
+  background-color:  #2D3440;
+  border-radius: 50%;
+  opacity: 0.5;
 }
 
 .catalog-products-list {
@@ -1479,10 +1640,11 @@ img {
 }
 
 .modal {
+  position: relative;
   box-sizing: border-box;
   margin: auto;
   width: 570px;
-  height: 545px;
+  min-height: 545px;
   padding: 32px 64px 66px 64px;
   color: #2D3440;
   background-color: #FCFCFC;
@@ -1493,6 +1655,15 @@ img {
 .modal-close-button {
   display: block;
   position: absolute;
+  width: 14px;
+  height: 14px;
+  right: 36px;
+  margin-bottom: 16px;
+  background-image: url("../images/catalog.html/cross-modal-view.svg");
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .modal-content {
@@ -1523,14 +1694,21 @@ img {
   display: block;
   box-sizing: border-box;
   width: 442px;
+  margin: 0;
 }
 
 .modal-field-message {
-  
+  display: block;
+  box-sizing: border-box;
+  padding: 14px 0 115px 16px;
   min-height: 149px;
 }
 
 .modal-button {
   margin-top: 32px;
   margin-left: auto;
+}
+
+.modal-container-close {
+  display: none;
 }
