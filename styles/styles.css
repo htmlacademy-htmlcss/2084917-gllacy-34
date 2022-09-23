@@ -80,6 +80,7 @@ img {
 }
 
 .button {
+  position: relative;
   display: block;
   box-sizing: border-box;
   padding: 12px 32px;
@@ -98,6 +99,74 @@ img {
     0 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
 }
+
+.button:default {
+  color: #2D3440;
+  background-color: #FCFCFC;
+  border: none;
+  box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4),
+    0 4px 12px rgba(45, 52, 64, 0.1);
+  border-radius: 26px;
+}
+
+.button:hover {
+  background: rgba(252, 252, 252, 0.4);
+  border: 4px solid #FCFCFC;
+  background-color: rgba(252, 252, 252, 0.3);
+  box-shadow: none;
+}
+
+.button:active {
+  background-color: #FCFCFC;
+  border: 2px solid #2D3440;
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button:focus {
+  background: rgba(252, 252, 252, 0.5);
+  border: 2px solid #2D3440;
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button:disabled {
+  background: #E7E7E7;
+  border: 4px solid rgba(252, 252, 252, 0.4);
+}
+
+.button-loading {
+  display: block;
+  box-sizing: border-box;
+  width: 141px;
+  color: #2D3440;
+  background-color: #FCFCFC;
+  border: none;
+  box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4),
+    0 4px 12px rgba(45, 52, 64, 0.1);
+  border-radius: 26px;
+}
+
+.button-loading::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #242424;
+  opacity: 0.24;
+  border-radius: 50%;
+}
+
+.button-loading::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  right: 17px;
+  border: 2px solid transparent;
+  border-color: #242424 transparent transparent transparent;
+  transform: rotate(45deg);
+  border-radius: 50%;
+}
+
 
 .order-button {
   width: 139px;
@@ -209,11 +278,36 @@ img {
   text-transform: none;
   text-decoration: none;
   color: #2D3440;
+  border: 2px solid transparent;
 }
 
-.navigation-menu-link-current {
+.navigation-link-current {
   display: block;
-  background: #FF4A78;
+  color: #FCFCFC;
+  background-color: #FF4A78;
+  border-radius: 30px;
+}
+
+.navigation-menu-link:default {
+  color: #2D3440;
+}
+
+.navigation-menu-link:hover {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.5);
+  border-radius: 30px;
+}
+
+.navigation-menu-link:active {
+  color: #2D3440;
+  background-color: #FCFCFC;
+  border-radius: 30px;
+}
+
+.navigation-menu-link:focus {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.5);
+  border: 2px solid #2D3440;
   border-radius: 30px;
 }
 
@@ -237,15 +331,61 @@ img {
   text-transform: none;
   text-decoration: none;
   color: #2D3440;
+  border: 2px solid transparent;
+}
+
+.navigation-user-menu-link:default {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.3);
+}
+
+.navigation-user-menu-link:hover {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.navigation-user-menu-link:active {
+  color: #2D3440;
+  background-color: #FCFCFC;
+}
+
+.navigation-user-menu-link:focus {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.5);
+  border: 2px solid #000000;
 }
 
 .navigation-phone-link {
   display: block;
+  padding: 6px 0 6px 0;
   font-family: inherit;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+}
+
+.navigation-phone-link:default {
+  color: #2D3440;
+}
+
+.navigation-phone-link:hover {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.5);
+  border-radius: 30px;
+}
+
+.navigation-phone-link:active {
+  color: #2D3440;
+  background-color: #FCFCFC;
+  border-radius: 30px;
+}
+
+.navigation-phone-link:focus {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.5);
+  border: 2px solid #000000;
+  border-radius: 30px;
 }
 
 .search-link,
@@ -1803,6 +1943,16 @@ img {
   width: 16px;
 }
 
+.control-input[type="checkbox"]:focus + .control-mark::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/catalog.html/icon-checkbox-square-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
 .control-input[type="checkbox"]:disabled + .control-mark::after {
   position: absolute;
   content: "";
@@ -1843,6 +1993,17 @@ img {
   height: 16px;
   width: 16px;
 }
+
+.control-input[type="checkbox"]:checked:focus + .control-mark::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/catalog.html/icon-checkbox-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
 
 .control-input[type="checkbox"]:checked:disabled + .control-mark::after {
   position: absolute;
@@ -1907,7 +2068,24 @@ img {
   margin-right: 8px;
 }
 
+.control-input[type="radio"]:focus + .control-mark {
+  border-radius: 50%;
+  border-color: #FCFCFC;
+  margin-right: 8px;
+}
+
 .control-input[type="radio"]:checked:hover + .control-mark::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  top: 5px;
+  left: 5px;
+  background-color: #FCFCFC;
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked:focus + .control-mark::before {
   position: absolute;
   content: "";
   width: 6px;
