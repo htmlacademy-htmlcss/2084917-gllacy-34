@@ -61,7 +61,6 @@ img {
 .page-header {
   width: 1170px;
   margin: 0 auto;
-  /* padding: 24px 0; */
 }
 
 .page-header-catalog {
@@ -92,15 +91,6 @@ img {
   text-transform: none;
   text-decoration: none;
   cursor: pointer;
-  color: #2D3440;
-  background-color: #FCFCFC;
-  border: none;
-  box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4),
-    0 4px 12px rgba(45, 52, 64, 0.1);
-  border-radius: 26px;
-}
-
-.button:default {
   color: #2D3440;
   background-color: #FCFCFC;
   border: none;
@@ -196,11 +186,6 @@ img {
   border-radius: 20px;
 }
 
-.filter-button:default {
-  background-color: rgba(252, 252, 252, 0.3);
-  border: 2px solid #FCFCFC;
-}
-
 .filter-button:hover {
   background-color: #FCFCFC;
   box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.3);
@@ -217,7 +202,10 @@ img {
 }
 
 .filter-button:disabled {
+  background-color: rgba(252, 252, 252, 1);
   opacity: 0.4;
+  border: none;
+  box-shadow: none;
 }
 
 .catalog-button {
@@ -259,6 +247,10 @@ img {
   margin-right: auto;
   padding: 0;
   list-style-type: none;
+}
+
+.navigation-menu-item {
+  position: relative;
 }
 
 .navigation-logo-link {
@@ -319,6 +311,10 @@ img {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.navigation-user-menu-item {
+  position: relative;
 }
 
 .navigation-user-menu-link {
@@ -399,7 +395,6 @@ img {
 
 .login-link,
 .cart-link {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -408,7 +403,6 @@ img {
 }
 
 .search-link {
-  position: relative;
   box-sizing: border-box;
   width: 32px;
   height: 32px;
@@ -423,7 +417,7 @@ img {
   width: 135px;
   margin-top: 8px;
   padding: 8px 0 8px 16px;
-  transform: translateX(12%);
+  left: 0;
   color: #2D3440;
   background-color: #FCFCFC;
   border-radius: 4px;
@@ -476,6 +470,26 @@ img {
   margin-bottom: 6px;
 }
 
+.popover-dropdown-item {
+  display: block;
+  box-sizing: border-box;
+  padding: 6px 0 6px 0;
+  width: 135px;
+}
+
+.popover-dropdown-item:hover {
+  background-color: #FFCBD8;
+}
+
+.popover-dropdown-item:active {
+  background-color: #FF7799;
+}
+
+/* для ссылок каталога поповера в выбранном состоянии*/
+.popover-link-catalog-current {
+  background-color: #FF4A78;
+}
+
 .popover-dropdown-item:last-child {
   margin-bottom: 0;
 }
@@ -488,7 +502,7 @@ img {
   width: 356px;
   margin-top: 8px;
   padding: 24px 16px;
-  transform: translateX(-90%);
+  right: 0;
   color: #2D3440;
   background-color: #FCFCFC;
   border-radius: 4px;
@@ -499,25 +513,7 @@ img {
   display: block;
   box-sizing: border-box;
   width: 324px;
-  /* background-image: url("../images/index.html/icon-divider-grey.svg");
-  background-repeat: no-repeat;
-  background-position: 14px center; */
 }
-
-.popover-search-field:hover {
-  /* background-image: url("../images/index.html/icon-divider-grey.svg");
-  background-repeat: no-repeat;
-  background-size: 0 20px;
-  background-position: 116px center; */
-  background-image: url("../images/index.html/cross-popover.svg");
-  background-repeat: no-repeat;
-  background-position: right 19px;
-  width: 10px;
-  height: 10px;
-  border: none;
-  color: #2D3440;
-}
-
 
 .popover-login {
   z-index: 2;
@@ -528,7 +524,7 @@ img {
   margin: 0;
   margin-top: 8px;
   padding: 48px 48px 36px 48px;
-  transform: translateX(-80%);
+  right: 0;
   color: #2D3440;
   background-color: #FCFCFC;
   border-radius: 4px;
@@ -545,7 +541,7 @@ img {
   width: 324px;
 }
 
-.popover-field::placeholder {
+.popover-field.field::placeholder {
   color: #2D3440;
 }
 
@@ -585,7 +581,7 @@ img {
   min-height: 382px;
   margin-top: 8px;
   padding: 48px;
-  transform: translateX(-76%);
+  right: 0;
   color: #2D3440;
   background-color: #FCFCFC;
   border-radius: 4px;
@@ -682,11 +678,13 @@ img {
 }
 
 .popover-cart-empty {
+  position: absolute;
   display: block;
   box-sizing: border-box;
   width: 288px;
   margin-top: 8px;
   padding: 48px 0 48px 0;
+  right: 0;
   background-color: #FCFCFC;
   box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
   border-radius: 4px;
@@ -1769,11 +1767,6 @@ img {
   appearance: none;
 }
 
-.select-control:default {
-  color: #2D3440;
-  background-color: rgba(252, 252, 252, 0.3);
-}
-
 .select-control:hover {
   color: #2D3440;
   background-color: rgba(252, 252, 252, 0.5);
@@ -1782,7 +1775,7 @@ img {
 .select-control:focus {
   color: #2D3440;
   background-color: rgba(252, 252, 252, 0.4);
-  outline: 3px solid #FCFCFC;
+  box-shadow: inset 0 0 0 2px #ffffff;
 }
 
 .range-scale-group {

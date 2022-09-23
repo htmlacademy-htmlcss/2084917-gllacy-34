@@ -72,10 +72,7 @@
               <h3 class="visually-hidden">Поиск по сайту</h3>
               <form class="popover-form-search" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden popover-form-label" for="search">Поиск</label>
-                <input class="popover-field field" type="text" id="search" name="search" placeholder="Поиск по сайту" required>
-                <button class="button popover-button-search" type="reset">
-                  <span class="visually-hidden">Свернуть поиск</span>
-                </button>
+                <input class="popover-search-field field" type="text" id="search" name="search" placeholder="Поиск по сайту" required>
               </form>
             </div>
           </li>
@@ -94,11 +91,13 @@
               <h3 class="popover-login-title">Личный кабинет</h3>
               <form class="popover-form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden popover-form-label" for="email">Ваш email</label>
-                <input class="popover-field field" type="email" id="email" name="email" placeholder="email@example.com" required>
+                <input class="popover-field field" type="email" id="email" name="email" placeholder="email@example.com"
+                  required>
                 <label class="visually-hidden popover-form-label" for="password">Ваш пароль</label>
-                <input class="popover-field field" type="password" id="password" name="password" placeholder="Введите пароль" value="" required>
+                <input class="popover-field field" type="password" id="password" name="password"
+                  placeholder="Введите пароль" value="" required>
                 <div class="popover-auth">
-                  <button class="button popover-button-login" type="submit">
+                  <button class="button pink-button popover-button-login" type="submit">
                     Войти
                   </button>
                   <div class="popover-link-group">
@@ -127,30 +126,36 @@
               <h3 class="popover-title">Корзина</h3>
               <ul class="popover-list">
                 <li class="popover-item">
-                  <img class="image-popover" src="images/index.html/raspberry.png" width="46" height="46" alt="Мороженное с малиной.">
-                  <a class="popover-title" href="catalog.html">
-                    Малинка
-                  </a>
-                  <span class="popover-item-details">1 кг х 310 ₽</span>
+                  <img class="image-popover" src="images/index.html/raspberry.png" width="46" height="46"
+                    alt="Мороженное с малиной.">
+                  <div class="popover-details-group">
+                    <a class="popover-cart-link" href="catalog.html">
+                      Малинка
+                    </a>
+                    <span class="popover-item-details">1 кг х 310 ₽</span>
+                  </div>
                   <b class="popover-item-price">310 ₽</b>
                   <button class="button close-button-popover" type="button">
                     <span class="visually-hidden">Удалить из корзины.</span>
                   </button>
                 </li>
                 <li class="popover-item">
-                  <img class="image-popover" src="images/index.html/bubblegum.png" width="46" height="46" alt="Мороженное с малиной.">
-                  <a class="popover-title" href="catalog.html">
-                    Малинка
-                  </a>
-                  <span class="popover-item-details">1,5 кг х 320 ₽</span>
+                  <img class="image-popover" src="images/index.html/bubblegum.png" width="46" height="46"
+                    alt="Мороженное с малиной.">
+                  <div class="popover-details-group">
+                    <a class="popover-cart-link" href="catalog.html">
+                      Бабл-гам
+                    </a>
+                    <span class="popover-item-details">1,5 кг х 320 ₽</span>
+                  </div>
                   <b class="popover-item-price">480 ₽</b>
                   <button class="button close-button-popover" type="button">
                     <span class="visually-hidden">Удалить из корзины.</span>
                   </button>
                 </li>
               </ul>
-              <div class="">
-                <button class="button popover-button" type="submit">
+              <div class="popover-button-container">
+                <button class="button pink-button popover-button" type="submit">
                   Оформить заказ
                 </button>
                 <span class="popover-total-price">Итого: 790 ₽</span>
