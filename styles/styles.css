@@ -281,6 +281,7 @@ img {
 }
 
 .cart-button {
+  display: block;
   width: 32px;
   height: 32px;
   padding: 8px;
@@ -288,6 +289,42 @@ img {
   border-radius: 50%;
   border: none;
   box-shadow: none;
+}
+
+.cart-button:hover {
+  background-color: rgba(252, 252, 252, 0.3);
+  box-shadow: 0 0 0 2px #FF2F64;
+}
+
+.cart-button:active {
+  background-color: #FFCBD8;
+  box-shadow: 0 0 0 2px #FF2F64;
+}
+
+.cart-button:focus {
+  background-color: #FF2F64;
+  box-shadow: 0 0 0 2px #2D3440;
+}
+
+.cart-button:disabled {
+  background-color: #B9B9B9;
+  box-shadow: none;
+}
+
+.icon-cart-button svg {
+  fill: #FCFCFC;
+}
+
+.icon-cart-button:hover svg {
+  fill: #242424;
+}
+
+.icon-cart-button:active svg {
+  fill: #242424;
+}
+
+.icon-cart-button:disabled {
+  fill: #565C66;
 }
 
 .navigation-menu {
@@ -926,6 +963,20 @@ input[type="search"]::-webkit-search-results-decoration {
 .pagination-button-current {
   background-color: #FCFCFC;
   opacity: 1;
+}
+
+.slider-pagination-button:hover {
+  background-color: rgba(252, 252, 252, 0.3);
+  box-shadow: 0 0 0 1px #FCFCFC;
+}
+
+.slider-pagination-button:active {
+  background-color: #FCFCFC;
+}
+
+.slider-pagination-button:focus {
+  background: rgba(252, 252, 252, 0.3);
+  box-shadow: 0 0 0 1px #2D3440;
 }
 
 .slider-social-container {
