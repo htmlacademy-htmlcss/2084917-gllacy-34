@@ -82,7 +82,9 @@ img {
   position: relative;
   display: block;
   box-sizing: border-box;
+  max-width: max-content;
   padding: 12px 32px;
+  font-family: inherit;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -100,33 +102,33 @@ img {
 }
 
 .button:hover {
-  background: rgba(252, 252, 252, 0.4);
-  border: 4px solid #FCFCFC;
-  background-color: rgba(252, 252, 252, 0.3);
-  box-shadow: none;
+  background-color: rgba(252, 252, 252, 0.4);
+  box-shadow: 0 0 0 4px #FCFCFC,
+    0 4px 15px rgba(133, 133, 133, 0.15);
 }
 
 .button:active {
   background-color: #FCFCFC;
-  border: 2px solid #2D3440;
-  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+  box-shadow: 0 0 0 2px #2D3440,
+    0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 .button:focus {
   background: rgba(252, 252, 252, 0.5);
-  border: 2px solid #2D3440;
-  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+  box-shadow: 0 0 0 2px #2D3440,
+    0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 .button:disabled {
   background: #E7E7E7;
-  border: 4px solid rgba(252, 252, 252, 0.4);
+  box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4);
 }
 
 .button-loading {
   display: block;
   box-sizing: border-box;
-  width: 141px;
+  max-width: max-content;
+  padding-right: 40px;
   color: #2D3440;
   background-color: #FCFCFC;
   border: none;
@@ -140,6 +142,7 @@ img {
   position: absolute;
   width: 14px;
   height: 14px;
+  right: 17px;
   border: 2px solid #242424;
   opacity: 0.24;
   border-radius: 50%;
@@ -157,17 +160,71 @@ img {
   border-radius: 50%;
 }
 
-
-.order-button {
-  width: 139px;
-}
-
 .pink-button {
-  width: 152px;
   color: #FCFCFC;
   background-color: #FF2F64;
   box-shadow: 0 0 0 4px rgba(255, 47, 100, 0.3),
     0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.pink-button:hover {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.3);
+  box-shadow: 0 0 0 4px #FF2F64;
+}
+
+.pink-button:active {
+  color: #FCFCFC;
+  background: #FEAFC3;
+  box-shadow: 0 0 0 2px #2D3440,
+    0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.pink-button:focus {
+  color: #FCFCFC;
+  background: #FF2F64;
+  box-shadow: 0 0 0 2px #2D3440,
+    0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.pink-button:disabled {
+  color: #565C66;
+  background: #B9B9B9;
+  box-shadow: 0 0 0 4px rgba(185, 185, 185, 0.3);
+}
+
+.pink-button-loading {
+  display: block;
+  box-sizing: border-box;
+  max-width: max-content;
+  padding-right: 45px;
+  color: #FCFCFC;
+  background-color: #FF2F64;
+  box-shadow: 0 0 0 4px rgba(255, 47, 100, 0.3),
+    0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.pink-button-loading::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  right: 17px;
+  border: 2px solid #FCFCFC;
+  opacity: 0.25;
+  border-radius: 50%;
+}
+
+.pink-button-loading::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  right: 17px;
+  border: 2px solid transparent;
+  border-color: #FCFCFC transparent transparent transparent;
+  transform: rotate(45deg);
+  border-radius: 50%;
 }
 
 .filter-button {
@@ -524,12 +581,11 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance: none;
   width: 10px;
   height: 10px;
+  color: #242424;
   background-image: url("../images/index.html/cross-popover.svg");
   background-repeat: no-repeat;
   cursor: pointer;
 }
-
-
 
 .popover-login {
   z-index: 2;
