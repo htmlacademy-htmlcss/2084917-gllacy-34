@@ -270,15 +270,71 @@ img {
 }
 
 .slider-button {
+  position: relative;
   display: block;
   box-sizing: border-box;
   padding: 0;
   width: 38px;
   height: 38px;
-  border: none;
-  background-color: transparent;
+  background: rgba(252, 252, 252, 0.3);
+  border: 2px solid #FCFCFC;
+  border-radius: 26px;
   cursor: pointer;
 }
+
+.slider-button-prev {
+  display: block;
+  position: absolute;
+  fill: #FCFCFC;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 11px;
+}
+
+.slider-button-next {
+  display: block;
+  position: absolute;
+  fill: #FCFCFC;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 11px;
+}
+
+/* .slider-button-prev:hover,
+.slider-button-prev:active,
+.slider-button-prev:focus,
+.slider-button-next:hover,
+.slider-button-next:active,
+.slider-button-next:focus  {
+  fill: #2D3440;
+} */
+
+.slider-button-prev:disabled,
+.slider-button-next:disabled {
+  fill: rgba(252, 252, 252, 0.3);
+  opacity: 0.4;
+}
+
+.slider-button:hover .slider-button-prev{
+  fill: #2D3440;
+  background-color: #FCFCFC;
+}
+
+.slider-button:active {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.slider-button:focus .slider-button-prev{
+  fill: #2D3440;
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 2px solid #2D3440;
+}
+
+.slider-button:disabled {
+  background-color: rgba(252, 252, 252, 0.3);
+  opacity: 0.4;
+}
+
 
 .cart-button {
   display: block;
@@ -311,15 +367,15 @@ img {
   box-shadow: none;
 }
 
-.icon-cart-button svg {
+.icon-cart-button {
   fill: #FCFCFC;
 }
 
-.icon-cart-button:hover svg {
+.icon-cart-button:hover {
   fill: #242424;
 }
 
-.icon-cart-button:active svg {
+.icon-cart-button:active {
   fill: #242424;
 }
 
@@ -1069,7 +1125,32 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .social-link {
   display: block;
+  box-sizing: border-box;
   margin-right: 16px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  outline: 2px solid rgba(252, 252, 252, 0.3)
+}
+
+.social-link svg{
+  fill: #FCFCFC;
+}
+
+.social-link:hover {
+  background-color: #2D3440;
+}
+
+.social-link:active {
+  background-color: #2D3440;
+  box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.5);
+  opacity: 0.5;
+}
+
+.social-link:focus {
+  background-color: #2D3440;
+  box-shadow: 0 0 0 2px #2d3440;
+  border-radius: 50%;
 }
 
 .social-item:last-child {
