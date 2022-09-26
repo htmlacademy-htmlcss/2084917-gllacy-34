@@ -403,6 +403,11 @@ img {
   position: relative;
 }
 
+.navigation-menu-item:focus-within .popover-catalog {
+  display: block;
+}
+
+
 .navigation-logo-link {
   display: block;
   margin-right: 16px;
