@@ -1656,10 +1656,48 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: #FFFFFF;
   border: 1px solid #B9B9B9;
   border-radius: 4px;
+  outline: none;
 }
 
 .field::placeholder {
   color: #B9B9B9;
+}
+
+.field:hover {
+  color: #2d3440;
+  border: 1px solid #2D3440;
+}
+
+.field:focus {
+  color: #2d3440;
+  border: 2px solid #2D3440;
+}
+
+.field:disabled {
+  color: #2d3440;
+  background: #E7E7E7;
+  border: 1px solid #B9B9B9;
+
+}
+
+.field:disabled:hover {
+  color: #2d3440;
+  background: #E7E7E7;
+  border: 1px solid #B9B9B9;
+
+}
+
+/* в случае ошибки при вводе текста  */
+
+.error {
+  color: #2d3440;
+  border: 1px solid #EA5454;
+}
+
+.error:hover {
+  color: #2d3440;
+  border: 2px solid #EA5454;
+
 }
 
 .contacts {
