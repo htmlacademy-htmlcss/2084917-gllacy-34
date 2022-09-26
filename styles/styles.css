@@ -1657,6 +1657,7 @@ input[type="search"]::-webkit-search-results-decoration {
   border: 1px solid #B9B9B9;
   border-radius: 4px;
   outline: none;
+  box-shadow: none;
 }
 
 .field::placeholder {
@@ -1670,21 +1671,17 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .field:focus {
   color: #2d3440;
-  border: 2px solid #2D3440;
+  box-shadow: 0 0 0 2px #2D3440;
 }
 
 .field:disabled {
   color: #2d3440;
-  background: #E7E7E7;
+  background-color: #E7E7E7;
   border: 1px solid #B9B9B9;
-
 }
 
 .field:disabled:hover {
   color: #2d3440;
-  background: #E7E7E7;
-  border: 1px solid #B9B9B9;
-
 }
 
 /* в случае ошибки при вводе текста  */
@@ -1696,8 +1693,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .error:hover {
   color: #2d3440;
-  border: 2px solid #EA5454;
-
+  box-shadow: 0 0 0 2px #EA5454;
+  border: none;
 }
 
 .contacts {
@@ -2605,5 +2602,5 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .modal-container-close {
-  /* display: none; */
+  display: none;
 }
