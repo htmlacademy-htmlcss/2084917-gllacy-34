@@ -71,7 +71,7 @@ img {
 }
 
 .page-header-catalog {
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 }
 
 .main-container {
@@ -679,16 +679,16 @@ img {
 }
 
 .popover-search-container {
+  z-index: 2;
   position: absolute;
   padding-top: 8px;
+  right: 0;
 }
 
 .popover-search {
-  z-index: 2;
   box-sizing: border-box;
   width: 356px;
   padding: 21px 17px;
-  right: 0;
   color: #2D3440;
   background-color: #FCFCFC;
   border-radius: 4px;
@@ -716,18 +716,17 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .popover-login-container {
+  z-index: 2;
   position: absolute;
   padding-top: 8px;
+  right: 0;
 }
 
 .popover-login {
-  z-index: 2;
-  display: block;
   box-sizing: border-box;
   width: 420px;
   margin: 0;
-  padding: 48px 48px 36px 48px;
-  right: 0;
+  padding: 47px 47px 32px 47px;
   color: #2D3440;
   background-color: #FCFCFC;
   border-radius: 4px;
@@ -738,7 +737,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 16px;
+  gap: 13px;
 }
 
 .popover-field {
@@ -751,6 +750,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .popover-auth {
   display: flex;
+  align-items: center;
   margin-top: 16px;
 }
 
@@ -763,6 +763,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-top: 3px;
 }
 
 .popover-link {
@@ -790,18 +791,17 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .popover-cart-container {
+  z-index: 2;
   position: absolute;
   padding-top: 8px;
+  right: 0;
 }
 
 .popover-cart {
-  z-index: 1;
-  display: block;
   box-sizing: border-box;
   width: 441px;
   min-height: 382px;
   padding: 49px;
-  right: 0;
   color: #2D3440;
   background-color: #FCFCFC;
   border-radius: 4px;
@@ -824,7 +824,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .popover-list {
   display: grid;
-  grid-row-gap: 24px;
+  grid-row-gap: 21px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -932,16 +932,16 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .popover-cart-empty-container {
+  z-index: 1;
   position: absolute;
   padding-top: 8px;
+  right: 0;
 }
 
 .popover-cart-empty {
-  display: block;
   box-sizing: border-box;
   width: 288px;
   padding: 25px 0 25px 0;
-  right: 0;
   background-color: #FCFCFC;
   box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
   border-radius: 4px;
@@ -959,11 +959,13 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .navigation-user-menu-item:hover .popover,
+.navigation-user-menu-item:focus .popover,
 .navigation-user-menu-item:focus-within .popover {
   display: block;
 }
 
 .navigation-menu-item:hover .popover,
+.navigation-menu-item:focus .popover,
 .navigation-menu-item:focus-within .popover {
   display: block;
 }
@@ -1780,11 +1782,13 @@ input[type="search"]::-webkit-search-results-decoration {
 .field:hover {
   color: #2d3440;
   border: 1px solid #2D3440;
+  outline: none;
 }
 
 .field:focus {
   color: #2d3440;
   box-shadow: 0 0 0 2px #2D3440;
+  outline: none;
 }
 
 .field:disabled {
@@ -2059,12 +2063,11 @@ input[type="search"]::-webkit-search-results-decoration {
   height: 12px;
   top: 50%;
   transform: translateY(-50%);
-  left: 65px;
+  left: 66px;
   color: #2D3440;
   background-image: url("../images/catalog.html/icon-breadcrumbs.svg");
   background-repeat: no-repeat;
 }
-
 
 
 .breadcrumbs-link {
@@ -2073,6 +2076,7 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-right: 28px;
   font-family: inherit;
   font-style: normal;
+  font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   text-transform: none;
@@ -2099,7 +2103,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .breadcrumbs-title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
   padding: 0;
   font-family: inherit;
   font-style: normal;
@@ -2569,7 +2573,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 40px 2px 40px 2px;
+  padding: 40px 2px 41px 2px;
   margin-left: auto;
   margin-bottom: 40px;
   width: 681px;
@@ -2792,5 +2796,5 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .modal-container-close {
-  /* display: none; */
+  display: none;
 }
